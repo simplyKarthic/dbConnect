@@ -9,7 +9,7 @@ Future<String> signInWithEmail(String email, String password) async {
     email: email,
     password: password,
   );
-  final User user = userCredential.user!;
+  final User user = userCredential.user;
   return user.uid;
 }
 
