@@ -1,9 +1,14 @@
+import 'dart:isolate';
+
 import 'package:flutter/material.dart';
 import 'package:sqlite3/sqlite3.dart';
 import 'MyHomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:path_provider/path_provider.dart';
 
+import 'animater.dart';
+import 'animscren.dart';
+import 'isolater.dart';
 import 'myForm.dart';
 
 void main() async {
@@ -19,11 +24,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyForm(),
+      home: const AnimationScreen(),
     );
   }
 }
